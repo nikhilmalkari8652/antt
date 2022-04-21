@@ -620,11 +620,10 @@ public class ModifiedSelectorTest extends BaseSelectorTest {
      *
      * @param algo   configured test object
      */
-    //TODO: AVOID UNNECESSARY STRING INSTANTIATION TO SAVE MEMORY
     protected void doTest(Comparator comp) {
-        Object o1 = new String("string1");
-        Object o2 = new String("string2");
-        Object o3 = new String("string2"); // really "2"
+        Object o1 = "string1";
+        Object o2 = "string2";
+        Object o3 = "string2"; // really "2"
 
         assertTrue("Comparator gave wrong value.", comp.compare(o1, o2) != 0);
         assertTrue("Comparator gave wrong value.", comp.compare(o1, o3) != 0);
