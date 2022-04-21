@@ -143,10 +143,8 @@ public class Cab extends MatchingTask {
      * @return the delegate.
      * @throws BuildException on error.
      */
-    //TODO: CONSIDER SIMPLY RESTURNING THE VALUE VS STORING IT IN LOCAL VARIABLE
     protected ExecTask createExec() throws BuildException {
-        ExecTask exec = new ExecTask(this);
-        return exec;
+        return new ExecTask(this);
     }
 
     /**
