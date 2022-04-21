@@ -94,15 +94,15 @@ public class DynamicFilterTest extends BuildFileTest {
         public void setWith(char with) {
             this.with = with;
         }
-// TODO: USE BRACES FOR IF STATEMENTS
+
         public Reader chain(final Reader rdr) {
             return new BaseFilterReader(rdr) {
                 public int read()
                     throws IOException
                 {
                     int c = in.read();
-                    if (c == replace)
-                        return with;
+                    if (c == replace){
+                        return with;}
                     else
                         return c;
                 }
