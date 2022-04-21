@@ -74,7 +74,6 @@ public class Mapper extends DataType implements Cloneable {
      * Add a nested <code>FileNameMapper</code>.
      * @param fileNameMapper   the <code>FileNameMapper</code> to add.
      */
-    //TODO: NO NEED TO CALL STRING.VALUEOF TO APPEND TO A STRING
     public void add(FileNameMapper fileNameMapper) {
         if (isReference()) {
             throw noChildrenAllowed();
@@ -87,7 +86,7 @@ public class Mapper extends DataType implements Cloneable {
                 if (m instanceof ContainerMapper) {
                     container = (ContainerMapper) m;
                 } else {
-                    throw new BuildException(String.valueOf(m)
+                    throw new BuildException(m
                         + " mapper implementation does not support nested mappers!");
                 }
             }
