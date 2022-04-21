@@ -74,6 +74,7 @@ public class Mapper extends DataType implements Cloneable {
      * Add a nested <code>FileNameMapper</code>.
      * @param fileNameMapper   the <code>FileNameMapper</code> to add.
      */
+    //TODO: NO NEED TO CALL STRING.VALUEOF TO APPEND TO A STRING
     public void add(FileNameMapper fileNameMapper) {
         if (isReference()) {
             throw noChildrenAllowed();
