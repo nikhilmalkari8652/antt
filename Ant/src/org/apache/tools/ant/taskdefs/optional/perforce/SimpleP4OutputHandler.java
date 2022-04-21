@@ -52,11 +52,11 @@ public class SimpleP4OutputHandler extends P4HandlerAdapter {
      * @param line line of output
      * @throws BuildException does not throw exceptions any more
      */
-    //TODO: Do not use if statements that are always true or always false
+
     public void process(String line) throws BuildException {
-        if (true) {
+
             return;
-        }
+
 
         //Throw exception on errors (except up-to-date)
         //
