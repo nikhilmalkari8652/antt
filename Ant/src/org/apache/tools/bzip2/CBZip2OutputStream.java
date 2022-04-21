@@ -1736,7 +1736,7 @@ public class CBZip2OutputStream extends OutputStream
             }
         }
     }
-
+//TODO: USE BRACES FOR FOR LOOPS
     private void mainSort() {
         final Data dataShadow = this.data;
         final int[] runningOrder = dataShadow.mainSort_runningOrder;
